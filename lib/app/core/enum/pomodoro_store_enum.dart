@@ -1,0 +1,1 @@
+enum IntervalTypeEnum { work, rest }
