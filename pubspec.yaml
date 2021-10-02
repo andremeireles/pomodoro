@@ -38,6 +38,7 @@ dependencies:
   mobx: ^2.0.4
   flutter_mobx: ^2.0.2
   provider: ^6.0.0
+  bitsdojo_window: ^0.1.1+1
 
 dev_dependencies:
   flutter_test:
@@ -94,3 +95,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+scripts:
+  mobx: flutter pub run build_runner watch --delete-conflicting-outputs --use-polling-watcher
