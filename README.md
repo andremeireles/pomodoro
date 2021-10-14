@@ -1,16 +1,40 @@
-# pomodoro
+# Pomodoro
 
-A new Flutter project.
+Monitore o tempo de trabalho e de descanso.
 
-## Getting Started
+Criado para pôr em prática os conhecimentos adquiridos sobre a linguagem dart e o framework flutter.
 
-This project is a starting point for a Flutter application.
+Este projeto está documentado e disponível em [documentação](https://andremeireles.github.io/pomodoro/docs/api/index.html). Lá você encontra maiores informações sobre o código.
 
-A few resources to get you started if this is your first Flutter project:
+## Preview
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+<p align="center">
+  <img width="310" height="650" src="assets/readme/pomodoroPage.png" alt="Pomodoro">
+</p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+  <a href="app_client/assets/readme/signin.png">Baixe o APK</a>
+</p>
+
+## 💬 Desenvolvimento
+
+- [x] PomodoroPage
+- [ ] SettingsPage
+- [ ] `shared_preferences` para persistência de dados
+
+## 🔭 Aprendizado
+
+- Clean Code
+- Dart null-safety
+- Componentização de widgets
+- Gerência de estado com `mobx`
+- Reatividade com `provider`
+- Internacionalização (`en, pt_br`)
+- Suporte a desktop (botões de minimizar, fechar)
+
+## 🌱 Próximos passos
+
+- Animações
+- Tema claro e escuro
+- Suporte a mais idiomas
+- Aumentar e diminuir os minutos, se o botão for mantido pressionado
