@@ -1,0 +1,36 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Pomodoro",
+  "@appTitle": {
+    "description": "Title of the App"
+  },
+  "work": "Work",
+  "@work": {
+      "description": "Title of the interval when is working"
+  },
+  "workTime": "Work Time",
+  "@workTime": {
+      "description": "Title of the interval when is working"
+  },
+  "rest": "Rest",
+  "@rest": {
+      "description": "Title of the interval when is resting"
+  },
+  "restTime": "Rest Time",
+  "@restTime": {
+      "description": "Title of the interval when is resting"
+  },
+  "start": "Start",
+  "@start": {
+      "description": "Title of the start button"
+  },
+  "stop": "Stop",
+  "@stop": {
+      "description": "Title of the stop button"
+  },
+  "restart": "Restart",
+  "@restart": {
+      "description": "Title of the restart button"
+  }
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:pomodoro/intl/generated/l10n.dart';
 import 'package:provider/provider.dart';
 
 import '../../domain/pomodoro_store.dart';
@@ -23,7 +24,9 @@ class StopWatcherWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  store.isWorking() ? 'Work Time' : 'Rest Time',
+                  store.isWorking()
+                      ? AppLocalizations.of(context).workTime
+                      : AppLocalizations.of(context).restTime,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
@@ -46,7 +49,7 @@ class StopWatcherWidget extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 10),
                         child: StopwatcherButtonWidget(
                           icon: Icons.play_arrow,
-                          text: 'Start',
+                          text: AppLocalizations.of(context).start,
                           click: store.start,
                         ),
                       ),
@@ -55,7 +58,7 @@ class StopWatcherWidget extends StatelessWidget {
                         padding: const EdgeInsets.only(right: 10),
                         child: StopwatcherButtonWidget(
                           icon: Icons.stop,
-                          text: 'Stop',
+                          text: AppLocalizations.of(context).stop,
                           click: store.stop,
                         ),
                       ),
@@ -63,7 +66,7 @@ class StopWatcherWidget extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 10),
                       child: StopwatcherButtonWidget(
                         icon: Icons.refresh,
-                        text: 'Restart',
+                        text: AppLocalizations.of(context).restart,
                         click: store.restart,
                       ),
                     ),

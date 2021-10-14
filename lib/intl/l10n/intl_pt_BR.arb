@@ -1,0 +1,37 @@
+{
+  "@@locale": "pt_BR",
+
+  "appTitle": "Pomodoro",
+  "@appTitle": {
+    "description": "Título do App"
+  },
+  "work": "Trabalho",
+  "@work": {
+      "description": "Título do intervalo quando se está trabalhando"
+  },
+  "workTime": "Hora de Trabalhar",
+  "@workTime": {
+      "description": "Título do intervalo quando se está trabalhando"
+  },
+  "rest": "Descanso",
+  "@rest": {
+      "description": "Título do intervalo quando se está descansando"
+  },
+  "restTime": "Hora de Descansar",
+  "@restTime": {
+      "description": "Título do intervalo quando se está descansando"
+  },
+  "start": "Iniciar",
+  "@start": {
+      "description": "Título do botão de iniciar"
+  },
+  "stop": "Parar",
+  "@stop": {
+      "description": "Título do botão de parar"
+  },
+  "restart": "Reiniciar",
+  "@restart": {
+      "description": "Título do botão de reiniciar"
+  }
+
+}

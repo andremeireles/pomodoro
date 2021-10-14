@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
+import 'package:pomodoro/intl/generated/l10n.dart';
+
 import '../../domain/pomodoro_store.dart';
 import '../widgets/stopwatcher_widget.dart';
 import '../widgets/input_time_widget.dart';
@@ -33,7 +35,7 @@ class PomodoroPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InputTimeWidget(
-                    title: 'Work',
+                    title: AppLocalizations.of(context).work,
                     value: store.workTime,
                     inc: store.started && store.isWorking()
                         ? null
@@ -43,7 +45,7 @@ class PomodoroPage extends StatelessWidget {
                         : store.decrementWorkTime,
                   ),
                   InputTimeWidget(
-                    title: 'Rest',
+                    title: AppLocalizations.of(context).rest,
                     value: store.restTime,
                     inc: store.started && store.isResting()
                         ? null
