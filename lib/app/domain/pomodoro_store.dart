@@ -28,10 +28,11 @@ abstract class PomodoroStoreBase with Store {
 
   Timer? timer;
 
+  /// Starts the stopwatch if not already running.
   @action
   void start() {
     started = true;
-    timer = Timer.periodic(Duration(milliseconds: 100), (timer) {
+    timer = Timer.periodic(Duration(seconds: 1), (timer) {
       if (minutes == 0 && seconds == 0) {
         _changeIntervalType();
       } else if (seconds == 0) {
@@ -43,12 +44,14 @@ abstract class PomodoroStoreBase with Store {
     });
   }
 
+  /// Stops the stopwatch if already running.
   @action
   void stop() {
     started = false;
     timer?.cancel();
   }
 
+  /// Similar to stop but restarts the minutes.
   @action
   void restart() {
     stop();

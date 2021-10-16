@@ -4,16 +4,16 @@ Monitore o tempo de trabalho e de descanso.
 
 Criado para pôr em prática os conhecimentos adquiridos sobre a linguagem dart e o framework flutter.
 
-Este projeto está documentado e disponível em [documentação](https://andremeireles.github.io/pomodoro/docs/api/index.html). Lá você encontra maiores informações sobre o código.
+Este projeto estará em breve, documentado e disponível em [documentação](https://andremeireles.github.io/pomodoro/doc/api/index.html). Lá você encontrará maiores informações sobre o código.
 
 ## Preview
 
 <p align="center">
-  <img width="310" height="650" src="assets/readme/pomodoroPage.png" alt="Pomodoro">
+  <img height="500" src="assets/readme/pomodoroPage.png" alt="PomodoroPage">
 </p>
 
 <p align="center">
-  <a href="app_client/assets/readme/signin.png">Baixe o APK</a>
+  <a href="https://github.com/andremeireles/pomodoro/packages/pomodoro.apk">Baixe o APK</a>
 </p>
 
 ## 💬 Desenvolvimento
