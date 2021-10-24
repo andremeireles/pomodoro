@@ -17,9 +17,11 @@ abstract class PomodoroStoreBase with Store {
   @observable
   int seconds = 0;
 
+  /// The initial work time.
   @observable
   int workTime = 2;
 
+  /// The initial rest time.
   @observable
   int restTime = 1;
 
@@ -59,6 +61,7 @@ abstract class PomodoroStoreBase with Store {
     seconds = 0;
   }
 
+  /// Increments the work time and restarts the stopwatch
   @action
   void incrementWorkTime() {
     workTime++;
@@ -67,6 +70,7 @@ abstract class PomodoroStoreBase with Store {
     }
   }
 
+  /// Decrements the work time and restarts the stopwatch
   @action
   void decrementWorkTime() {
     if (workTime > 1) {
@@ -77,6 +81,7 @@ abstract class PomodoroStoreBase with Store {
     }
   }
 
+  /// Increments the rest time and restarts the stopwatch
   @action
   void incrementRestTime() {
     restTime++;
@@ -85,6 +90,7 @@ abstract class PomodoroStoreBase with Store {
     }
   }
 
+  /// Decrements the rest time and restarts the stopwatch
   @action
   void decrementRestTime() {
     if (restTime > 1) {

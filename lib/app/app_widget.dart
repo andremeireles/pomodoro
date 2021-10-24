@@ -18,6 +18,7 @@ class AppWidget extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Slidy',
         theme: ThemeData(primarySwatch: Colors.blue),
         localizationsDelegates: const [

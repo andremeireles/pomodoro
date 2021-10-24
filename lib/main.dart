@@ -9,15 +9,15 @@ void main() {
   runApp(
     ModularApp(
       module: AppModule(),
-      child: AppWidget(),
+      child: const AppWidget(),
     ),
   );
   doWhenWindowReady(() {
-    final initialSize = Size(400, 650);
+    const initialSize = Size(400, 650);
     appWindow.alignment = Alignment.center;
     appWindow.size = initialSize;
     appWindow.minSize = initialSize;
-    appWindow.maxSize = Size(400, 650);
+    appWindow.maxSize = const Size(400, 650);
     appWindow.title = 'Pomodoro plus plus';
     appWindow.show();
   });

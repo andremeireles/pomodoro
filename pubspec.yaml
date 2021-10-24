@@ -34,7 +34,7 @@ dev_dependencies:
 
 flutter:
 
-  generate: true
+  generate: false
   uses-material-design: true
 
 flutter_intl:
