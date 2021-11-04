@@ -41,36 +41,41 @@ class StopWatcherWidget extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    if (!store.started)
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: StopwatcherButtonWidget(
-                          icon: Icons.play_arrow,
-                          text: AppLocalizations.of(context).start,
-                          click: store.start,
+                FittedBox(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        if (!store.started)
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: StopwatcherButtonWidget(
+                              icon: Icons.play_arrow,
+                              text: AppLocalizations.of(context).start,
+                              click: store.start,
+                            ),
+                          ),
+                        if (store.started)
+                          Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: StopwatcherButtonWidget(
+                              icon: Icons.stop,
+                              text: AppLocalizations.of(context).stop,
+                              click: store.stop,
+                            ),
+                          ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: StopwatcherButtonWidget(
+                            icon: Icons.refresh,
+                            text: AppLocalizations.of(context).restart,
+                            click: store.restart,
+                          ),
                         ),
-                      ),
-                    if (store.started)
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: StopwatcherButtonWidget(
-                          icon: Icons.stop,
-                          text: AppLocalizations.of(context).stop,
-                          click: store.stop,
-                        ),
-                      ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: StopwatcherButtonWidget(
-                        icon: Icons.refresh,
-                        text: AppLocalizations.of(context).restart,
-                        click: store.restart,
-                      ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ],
             ),

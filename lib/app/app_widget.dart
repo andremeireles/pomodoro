@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:pomodoro/app/presentation/widgets/float_dialog.dart';
 import 'package:pomodoro/intl/generated/l10n.dart';
 import 'package:provider/provider.dart';
 import 'domain/pomodoro_store.dart';
@@ -15,6 +16,9 @@ class AppWidget extends StatelessWidget {
       providers: [
         Provider<PomodoroStore>(
           create: (_) => PomodoroStore(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => FloatDialog(),
         ),
       ],
       child: MaterialApp(

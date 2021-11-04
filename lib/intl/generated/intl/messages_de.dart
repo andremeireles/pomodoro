@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a de locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -17,20 +17,20 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'de';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appTitle": MessageLookupByLibrary.simpleMessage("Pomodoro"),
         "dialogTitle":
-            MessageLookupByLibrary.simpleMessage("Choose a language"),
-        "rest": MessageLookupByLibrary.simpleMessage("Rest"),
-        "restTime": MessageLookupByLibrary.simpleMessage("Rest Time"),
-        "restart": MessageLookupByLibrary.simpleMessage("Restart"),
-        "start": MessageLookupByLibrary.simpleMessage("Start"),
-        "stop": MessageLookupByLibrary.simpleMessage("Stop"),
-        "tooltip": MessageLookupByLibrary.simpleMessage("Change language"),
-        "work": MessageLookupByLibrary.simpleMessage("Work"),
-        "workTime": MessageLookupByLibrary.simpleMessage("Work Time")
+            MessageLookupByLibrary.simpleMessage("Wähle eine Sprache"),
+        "rest": MessageLookupByLibrary.simpleMessage("Ausruhen"),
+        "restTime": MessageLookupByLibrary.simpleMessage("Zeit zum ausruhen"),
+        "restart": MessageLookupByLibrary.simpleMessage("Neu starten"),
+        "start": MessageLookupByLibrary.simpleMessage("Starten"),
+        "stop": MessageLookupByLibrary.simpleMessage("Stopp"),
+        "tooltip": MessageLookupByLibrary.simpleMessage("Sprache ändern"),
+        "work": MessageLookupByLibrary.simpleMessage("Arbeit"),
+        "workTime": MessageLookupByLibrary.simpleMessage("Zeit zum Arbeiten")
       };
 }

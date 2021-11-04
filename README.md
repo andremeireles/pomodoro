@@ -30,7 +30,7 @@ A documentação estará disponível em breve no link [documentação](https://a
 - Componentização de widgets
 - Gerência de estado com `mobx`
 - Reatividade com `provider`
-- Internacionalização (`en, pt_br`)
+- Internacionalização (`de, en, pt_br`)
 - Suporte a desktop (botões de minimizar, fechar)
 
 ### 🌱 Próximos passos

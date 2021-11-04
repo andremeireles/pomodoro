@@ -1,44 +1,44 @@
 {
-  "@@locale": "pt_BR",
+  "@@locale": "de",
 
   "appTitle": "Pomodoro",
   "@appTitle": {
     "description": "Título do App"
   },
-  "work": "Trabalho",
+  "work": "Arbeit",
   "@work": {
       "description": "Título do intervalo quando se está trabalhando"
   },
-  "workTime": "Hora de Trabalhar",
+  "workTime": "Zeit zum Arbeiten",
   "@workTime": {
       "description": "Título do intervalo quando se está trabalhando"
   },
-  "rest": "Descanso",
+  "rest": "Ausruhen",
   "@rest": {
       "description": "Título do intervalo quando se está descansando"
   },
-  "restTime": "Hora de Descansar",
+  "restTime": "Zeit zum ausruhen",
   "@restTime": {
       "description": "Título do intervalo quando se está descansando"
   },
-  "start": "Iniciar",
+  "start": "Starten",
   "@start": {
       "description": "Título do botão de iniciar"
   },
-  "stop": "Parar",
+  "stop": "Stopp",
   "@stop": {
       "description": "Título do botão de parar"
   },
-  "restart": "Reiniciar",
+  "restart": "Neu starten",
   "@restart": {
       "description": "Título do botão de reiniciar"
   },
-  "dialogTitle": "Escolha um idioma",
+  "dialogTitle": "Wähle eine Sprache",
   "@dialogTitle": {
     "description": "Title of the Dialog Window"
   },
-  "tooltip": "Mudar idioma",
+  "tooltip": "Sprache ändern",
   "@tooltip": {
-      "description": "Sugestão do FloatActionButton"
+      "description": "Tooltip des FloatActionButton"
   }
 }

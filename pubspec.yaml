@@ -36,6 +36,8 @@ flutter:
 
   generate: false
   uses-material-design: true
+  assets:
+    - assets/images/
 
 flutter_intl:
   enabled: true # Required. Must be set to true to activate the package. Default: false

@@ -129,6 +129,26 @@ class AppLocalizations {
       args: [],
     );
   }
+
+  /// `Choose a language`
+  String get dialogTitle {
+    return Intl.message(
+      'Choose a language',
+      name: 'dialogTitle',
+      desc: 'Title of the Dialog Window',
+      args: [],
+    );
+  }
+
+  /// `Change language`
+  String get tooltip {
+    return Intl.message(
+      'Change language',
+      name: 'tooltip',
+      desc: 'Tooltip of the FloatActionButton',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -137,6 +157,7 @@ class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalizations> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale.fromSubtags(languageCode: 'en'),
+      Locale.fromSubtags(languageCode: 'de'),
       Locale.fromSubtags(languageCode: 'pt', countryCode: 'BR'),
     ];
   }

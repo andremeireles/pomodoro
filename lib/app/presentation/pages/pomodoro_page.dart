@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:pomodoro/app/presentation/widgets/float_dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:pomodoro/intl/generated/l10n.dart';
 
@@ -15,23 +16,30 @@ class PomodoroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final store = Provider.of<PomodoroStore>(context);
+    final controller = context.watch<FloatDialog>();
 
-    return Scaffold(
-      // floatingActionButton: FloatingActionButton(
-      //   child: Icon(Icons.settings),
-      //   onPressed: () {},
-      //   backgroundColor: Colors.red,
-      // ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(
-            child: StopWatcherWidget(),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 40),
-            child: Observer(
-              builder: (_) => Row(
+    return Observer(
+      builder: (_) => Scaffold(
+        floatingActionButton: FloatingActionButton(
+          elevation: 0,
+          onPressed: () {
+            controller.changeLocales(context);
+          },
+          hoverElevation: 0,
+          backgroundColor: store.isWorking() ? Colors.red : Colors.green,
+          child: Icon(Icons.settings),
+          tooltip: AppLocalizations.of(context).tooltip,
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: StopWatcherWidget(),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 40),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   InputTimeWidget(
@@ -57,8 +65,8 @@ class PomodoroPage extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

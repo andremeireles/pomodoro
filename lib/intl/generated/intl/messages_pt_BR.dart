@@ -22,11 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "appTitle": MessageLookupByLibrary.simpleMessage("Pomodoro"),
+        "dialogTitle":
+            MessageLookupByLibrary.simpleMessage("Escolha um idioma"),
         "rest": MessageLookupByLibrary.simpleMessage("Descanso"),
         "restTime": MessageLookupByLibrary.simpleMessage("Hora de Descansar"),
         "restart": MessageLookupByLibrary.simpleMessage("Reiniciar"),
         "start": MessageLookupByLibrary.simpleMessage("Iniciar"),
         "stop": MessageLookupByLibrary.simpleMessage("Parar"),
+        "tooltip": MessageLookupByLibrary.simpleMessage("Mudar idioma"),
         "work": MessageLookupByLibrary.simpleMessage("Trabalho"),
         "workTime": MessageLookupByLibrary.simpleMessage("Hora de Trabalhar")
       };

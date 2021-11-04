@@ -32,5 +32,13 @@
   "restart": "Restart",
   "@restart": {
       "description": "Title of the restart button"
+  },
+  "dialogTitle": "Choose a language",
+  "@dialogTitle": {
+    "description": "Title of the Dialog Window"
+  },
+  "tooltip": "Change language",
+  "@tooltip": {
+      "description": "Tooltip of the FloatActionButton"
   }
 }
