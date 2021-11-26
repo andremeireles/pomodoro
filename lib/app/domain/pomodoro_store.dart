@@ -25,6 +25,14 @@ abstract class PomodoroStoreBase with Store {
   @observable
   int restTime = 1;
 
+  /// Minimum minute allowed
+  @observable
+  int minTime = 1;
+
+  /// Maximum minute allowed
+  @observable
+  int maxTime = 901;
+
   @observable
   IntervalTypeEnum intervalType = IntervalTypeEnum.work;
 
@@ -34,7 +42,7 @@ abstract class PomodoroStoreBase with Store {
   @action
   void start() {
     started = true;
-    timer = Timer.periodic(Duration(seconds: 1), (timer) {
+    timer = Timer.periodic(Duration(milliseconds: 80), (timer) {
       if (minutes == 0 && seconds == 0) {
         _changeIntervalType();
       } else if (seconds == 0) {
@@ -64,16 +72,18 @@ abstract class PomodoroStoreBase with Store {
   /// Increments the work time and restarts the stopwatch
   @action
   void incrementWorkTime() {
-    workTime++;
-    if (isWorking()) {
-      restart();
+    if (workTime < maxTime) {
+      workTime++;
+      if (isWorking()) {
+        restart();
+      }
     }
   }
 
   /// Decrements the work time and restarts the stopwatch
   @action
   void decrementWorkTime() {
-    if (workTime > 1) {
+    if (workTime > minTime) {
       workTime--;
       if (isWorking()) {
         restart();
@@ -84,16 +94,18 @@ abstract class PomodoroStoreBase with Store {
   /// Increments the rest time and restarts the stopwatch
   @action
   void incrementRestTime() {
-    restTime++;
-    if (isResting()) {
-      restart();
+    if (restTime < maxTime) {
+      restTime++;
+      if (isResting()) {
+        restart();
+      }
     }
   }
 
   /// Decrements the rest time and restarts the stopwatch
   @action
   void decrementRestTime() {
-    if (restTime > 1) {
+    if (restTime > minTime) {
       restTime--;
       if (isResting()) {
         restart();
@@ -118,5 +130,21 @@ abstract class PomodoroStoreBase with Store {
       minutes = workTime;
     }
     seconds = 0;
+  }
+
+  bool restReadOnly() {
+    if (started && isResting()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  bool workReadOnly() {
+    if (started && isWorking()) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
