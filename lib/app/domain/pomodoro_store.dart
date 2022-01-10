@@ -42,7 +42,7 @@ abstract class PomodoroStoreBase with Store {
   @action
   void start() {
     started = true;
-    timer = Timer.periodic(Duration(milliseconds: 80), (timer) {
+    timer = Timer.periodic(Duration(seconds: 1), (timer) {
       if (minutes == 0 && seconds == 0) {
         _changeIntervalType();
       } else if (seconds == 0) {
